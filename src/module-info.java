@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author mehdi
+ *
+ */
+module app {
+}
