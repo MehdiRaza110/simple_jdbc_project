@@ -29,6 +29,9 @@ public class UpdateUser extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String email = request.getParameter("email");
+		String mobile = request.getParameter("mobile");
+		
+		request.setAttribute("mobile", mobile);
 		
 		session=request.getSession();
 		session.setAttribute("email", email);

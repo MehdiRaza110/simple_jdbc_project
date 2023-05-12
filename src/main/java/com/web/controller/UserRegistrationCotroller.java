@@ -34,7 +34,6 @@ public class UserRegistrationCotroller extends HttpServlet {
 		String mobile = request.getParameter("mobile");
 		DAOClass dao1=new DAOClass();
 		dao1.userRegistration(name, city, email, mobile);
-		
 		request.setAttribute("msg", "User Registered Succesfully..");
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/UserRegistration.jsp");
 		rd.forward(request, response);

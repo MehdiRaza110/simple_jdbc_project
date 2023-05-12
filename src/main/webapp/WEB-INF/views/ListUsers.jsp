@@ -52,7 +52,7 @@ while(res.next()){
 <a href="delete?emailid=<%=res.getString(3)%>">delete</a>
 </td>
 <td>
-<a href="updateUser?email=<%=res.getString(3)%>">update</a>
+<a href="updateUser?email=<%=res.getString(3)%>&mobile=<%=res.getString(4)%>">update</a>
 </td>
 </tr>
 <%} %>

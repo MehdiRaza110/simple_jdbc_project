@@ -14,9 +14,8 @@ public class DAOClass implements DAORepo {
 	@Override
 	public boolean checkUser(String email, String password) {
 		
+		connectDB();
 		try {	
-			connectDB();
-			
 			ResultSet res = stmnt.executeQuery("SELECT * FROM registration where email='"+email+"' AND password='"+password+"'");
 				if(res.next()) {
 					return true;
@@ -57,14 +56,13 @@ public class DAOClass implements DAORepo {
 	@Override
 	public void userRegistration(String name, String city, String email, String mobile) {
 		//System.out.println(true);
+		connectDB();
 		try {
-			connectDB();
 			stmnt.executeUpdate("insert into userRegistration values('"+name+"','"+city+"','"+email+"','"+mobile+"')");
-			closeDB();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		closeDB();
 	}
 
 	@Override
@@ -85,8 +83,8 @@ public class DAOClass implements DAORepo {
 	@Override
 	public boolean userEmail(String email) {
 		
+		connectDB();
 		try {	
-			connectDB();
 			ResultSet chkMail =stmnt.executeQuery("SELECT * FROM registration where email='"+email+"'");
 				if(chkMail.next()) {
 					return true;

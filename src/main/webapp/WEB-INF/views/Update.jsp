@@ -15,7 +15,7 @@
 </table>
 <form action="updateUser" method="post">
 <table border="1" bordercolor="red" >
-<tr><td>Mobile</td><td><input type="text" name="mobile"/></td></tr>
+<tr><td>Mobile</td><td><input type="text" name="mobile" value="<%=request.getAttribute("mobile") %>"/></td></tr>
 <tr><td><input type="submit" value="update" class="btn"/></td></tr>
 </table>
 </form>
